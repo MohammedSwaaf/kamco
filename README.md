@@ -20,9 +20,8 @@
 
 ## Design Decisions
 
-- **Flagpedia**: Chose to integrate with GitHub APIs to search for repositories and users. GitHub APIs provide a wealth of data and functionality related to repositories and users, making it a suitable choice for this project.
 - **Flagpedia**: Chose to integrate with Flagpedia to utilize its handy country flags library through CDN.
-- **Native Mobile Number Input**: chose utilize 
+- **Native Mobile Number Input**: Chose to utilize Flagpedia to build a native mobile number input rather than using 3rd party library.
 
 ## Clone the app
 ```bash
@@ -44,5 +43,5 @@ npm start
 - **http://kamco-task.surge.sh/**
 
 ### Note
-Please make sure you are using the last version of node if you need to clone the app and start it 
+Please make sure you are using the latest version of Node.js if you need to clone the app and start it.
 
