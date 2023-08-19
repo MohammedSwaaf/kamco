@@ -26,7 +26,7 @@
 
 ## Clone the app
 ```bash
-[git clone https://github.com/MohammedSwaaf/Github-Task.git](https://github.com/MohammedSwaaf/kamco.git)
+git clone https://github.com/MohammedSwaaf/kamco.git
 ```
 
 ## Installation
