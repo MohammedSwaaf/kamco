@@ -1,0 +1,187 @@
+@import '../../sass/shared.scss';
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: $navbarHeight;
+    padding: 1.6em;
+    background-color: $primary;
+}
+
+.navbarClose,
+.navbarOpen {
+    display: none;
+    font-size: 1.1rem;
+}
+
+.navbarLeft {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .logoIcon {
+        height: 100%;
+    }
+
+    .logoBorder {
+        padding: 0 1.6em;
+    }
+
+    .pageTitle {
+        font-size: 1.25em;
+        color: white;
+    }
+}
+
+.navbarRight {
+    line-height: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &,
+    .contentWrapper {
+        > * {
+            margin-left: .5rem;
+            margin-right: .5rem;
+            
+            &:first {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .accountMenu {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .customStyles {
+        width: 380px;
+    }
+
+    .avatar {
+        margin-right: .6em;
+        padding: 4px 0;
+    }
+}
+
+.navAction {
+    height: $iconWidth;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 .5rem;
+    
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        opacity: .7;
+    }
+
+    img {
+        height: 100%;
+    }
+}
+
+.navbarDropdown {
+    color: $light;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $light;
+        opacity: .8;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbarResponsive {
+        .navbarRight {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: $primary;
+            max-width: 90%;
+            padding: 1rem;
+            box-shadow: -3px 0px 15px 6px rgba(0, 0, 0, 0.5);
+            z-index: 6;
+            flex-direction: column;
+            display: none;
+
+            &.visible {
+                display: flex;
+            }
+
+            &,
+            .contentWrapper {
+                > * {
+                    margin: .5rem;
+                }
+            }
+
+            .contentWrapper {
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .searchBar {
+                width: 100%;
+            }
+
+            .navbarClose {
+                display: inline-block;
+                color: $light;
+                margin: 0;
+                align-self: self-end;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $grayDimmed;
+                }
+            }
+        }
+
+        .navbarOpen {
+            display: inline-block;
+            color: $light;
+            margin: 0;
+
+            &:hover {
+                cursor: pointer;
+                color: $grayDimmed;
+            }
+        }
+
+        .navSeparator {
+            display: none;
+        }
+
+        .navActions {
+            order: 2;
+        }
+
+        .searchBar {
+            order: 2
+        }
+    }
+}

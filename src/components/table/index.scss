@@ -1,0 +1,106 @@
+@import '../../sass/shared.scss';
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 12px 12px 24px;
+
+    .rightSection {
+        img {
+            margin: 0 0.4rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .leftSection {
+        span {
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.219rem;
+        }
+    }
+}
+
+.ant-table-wrapper {
+    .ant-table-container table>thead>tr:first-child >{
+        *:first-child,
+        *:last-child {
+            border-radius: 0;
+        }
+    }
+
+    .ant-table-thead>tr> {
+        th {
+            color: $primary;
+        }
+        th,
+        td {
+            background-color: $primaryLight;
+
+            &:before {
+                content: none !important;
+            }
+        }
+    }
+    .ant-table-tbody {
+        tr {
+            td:nth-child(2),
+            td:nth-child(5) {
+                text-decoration: underline;
+            }
+            td {
+                border-color: $borderLight;
+            }
+        }
+    }
+    .ant-table-pagination {
+        margin: 1rem !important;
+        // background-color: $light;
+    }
+}
+
+.paginationText {
+    color: $grayDimmed;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+}
+
+.ant-pagination {
+
+    .ant-pagination-item {
+        border: 1px solid $borderLight;
+        margin-inline-end: 1rem;
+    }
+    
+    .ant-pagination-item-active {
+        background-color: $primary;
+        border-color: $primary;
+
+        a, a:hover {
+            color: $light;
+        }
+    }
+}
+
+@media only screen and (max-width: 787px) {
+    .paginationText {
+        display: block;
+        margin-top: 16px;
+        position: relative;
+        text-align: center;
+        left: 0;
+    }
+
+    .ant-table-wrapper .ant-table-pagination-right {
+        justify-content: center;
+    }
+}

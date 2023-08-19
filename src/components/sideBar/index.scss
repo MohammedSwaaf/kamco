@@ -1,0 +1,105 @@
+@import '../../sass/shared.scss';
+
+.ant-layout-sider.sideBar {
+    background: $bodyPrimary;
+    padding: $paddingMd;
+    flex: 0 0 230px !important;
+    max-width: unset !important;
+    min-width: 230px !important;
+    width: unset !important;
+}
+
+.ant-tabs .ant-tabs-nav::before {
+    border-bottom: 2px solid $borderLight;
+}
+
+.ant-tabs-nav-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .ant-tabs-tab {
+        margin: 0 !important;
+        flex: 0 0 50%;
+        max-width: 50%;
+
+        &:not(.ant-tabs-tab-active) {
+            opacity: .5;
+        }
+    }
+
+    .ant-tabs-tab-btn {
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        color: $dark !important;
+    }
+
+    .ant-tabs-ink-bar {
+        background-color: $dark;
+        height: 2px;
+    }
+
+}
+
+.sidebarOpen,
+.sidebarClose {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .ant-layout-sider.sideBar {
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+        width: 100vw !important;
+
+        &.visible {
+            -webkit-transform: translateX(-0%);
+            -ms-transform: translateX(-0%);
+            transform: translateX(-0%);
+        }
+    }
+
+    .sidebarClose,
+    .sidebarOpen {
+        display: inline-block;
+    }
+
+    .sidebarClose {
+        display: inline-block;
+        margin-bottom: 1rem;
+
+        &:hover {
+            cursor: pointer;
+            color: $grayDimmed;
+        }
+    }
+
+    .sidebarOpen {
+        position: absolute;
+        top: $navbarHeight + 24px;
+        right: 0;
+        transform: translateX(110%);
+        width: 2.2rem;
+        background: $light;
+        padding: 3px;
+        border: 1px solid $borderDark;
+        border-radius: 4px;
+        cursor: pointer;
+        -webkit-transition: -webkit-transform .3s ease-out;
+        transition: -webkit-transform .3s ease-out;
+        -o-transition: transform .3s ease-out;
+        transition: transform .3s ease-out;
+        transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+
+        &:hover {
+            transform: translateX(125%);
+        }
+    }
+}

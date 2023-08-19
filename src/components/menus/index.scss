@@ -1,0 +1,34 @@
+@import '../../sass/shared.scss';
+
+.ant-menu-item,
+.ant-menu-submenu {
+    color: $grayDimmed;
+    font-weight: 500;
+}
+
+.ant-menu-item-selected,
+.ant-menu-submenu-selected .ant-menu-submenu-title {
+    color: $dark;
+    font-weight: 600;
+}
+
+.ant-menu-item,
+.ant-menu-submenu-title {
+    padding: 0 !important;
+}
+
+.ant-menu-submenu-expand-icon {
+    width: 20px !important;
+}
+
+.ant-menu-submenu-expand-icon,
+.ant-menu-item-icon {
+    opacity: .5;
+
+}
+
+.ant-menu-item-selected .ant-menu-item-icon,
+.ant-menu-submenu-selected .ant-menu-submenu-title .ant-menu-item-icon,
+.ant-menu-submenu-selected .ant-menu-submenu-title .ant-menu-submenu-expand-icon {
+    opacity: 1;
+}

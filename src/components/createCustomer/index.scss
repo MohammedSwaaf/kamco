@@ -1,0 +1,111 @@
+@import '../../sass/shared.scss';
+
+.createCustomer {
+    background-color: $light !important;
+    padding: 24px;
+    margin: 0 0 24px;
+
+    .ant-form-item {
+        margin-bottom: 0;
+    }
+
+    .statusRow {
+        label {
+            font-weight: 600;
+            font-size: 0.8rem;
+            line-height: 1.106rem;
+        }
+
+        .ant-radio-group,
+        .statusActivity {
+            height: 2.75rem;
+            margin: .5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .formInput,
+        .titleSelect {
+            // max-width: 22.854rem;
+            height: 2.75rem;
+            padding: 0.8rem 1rem;
+            margin: .5rem 0;
+            border-radius: .5rem;
+            gap: .5rem;
+            border: 1px solid $grayDimmed;
+
+            &::placeholder {
+                color: $grayDimmed;
+            }
+
+            span {
+                border-color: $primary;
+            }
+        }
+        .titleSelect {
+            padding: 0;
+
+            .ant-select-selection-placeholder {
+                color: $grayDimmed;
+            }
+        }
+        .ant-select-selector {
+            height: 100%;
+            border: none;
+            background: transparent;
+            align-items: center;
+        }
+
+        .ant-radio-inner {
+            border-color: $primary;
+        }
+
+        .ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+            background-color: $primary;
+
+            &:focus {
+                background-color: $primary;
+            }
+        }
+
+        .active {
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.106rem;
+            margin-right: 0.5rem;
+            color: $dark ;
+        }
+
+        .ant-switch.ant-switch-checked {
+            background-color: $primary;
+        }
+
+        .inactive {
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.106rem;
+            margin-left: 0.5rem;
+            color: $grayDimmed;
+        }
+
+        .btnSubmit {
+            background-color: $primaryDimmedBtn;
+            border: 0.1rem solid $primaryDimmedBtn;
+            height: 2.625rem;
+            width: 8.875rem;
+            gap: .5rem;
+            border-radius: .5rem;
+            align-items: center;
+            font-weight: 600;
+            font-size: .813rem;
+            line-height: 1.138rem;
+            text-align: center;
+            color: $light;
+
+            &:hover {
+                background-color: $primaryDimmedBtn;
+                border: 0.1rem solid $primaryDimmedBtn;
+            }
+        }
+    }
+}

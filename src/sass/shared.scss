@@ -1,0 +1,27 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:where(.css-dev-only-do-not-override-byeoj0).ant-layout, :where(.css-dev-only-do-not-override-byeoj0).ant-layout *{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lightBox {
+    border: 1px solid $borderTable;
+    border-radius: 8px;
+}
+
+.ant-tag {
+                
+    border: none;
+    font-size: 15px;
+    border-radius: 4px;
+    
+    &.Pending {
+        background: #ebf593;
+        color: $dark;
+    }
+    &.Verified {
+        background-color: $successLightBg;
+        color: $successLight;
+    }
+}
